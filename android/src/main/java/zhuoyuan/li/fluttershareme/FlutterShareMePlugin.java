@@ -144,7 +144,7 @@ public class FlutterShareMePlugin implements MethodCallHandler, FlutterPlugin, A
      */
     private void shareSystem(Result result, String msg) {
         try {
-            Intent textIntent = new Intent("android.intent.action.SEND");
+            Intent textIntent = new Intent("android.intent.action.VIEW");
             textIntent.setType("text/plain");
             textIntent.putExtra("android.intent.extra.TEXT", msg);
             activity.startActivity(Intent.createChooser(textIntent, "Share to"));
